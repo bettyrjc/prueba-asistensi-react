@@ -1,0 +1,582 @@
+.main {
+  position: relative;
+}
+.slider {
+  &-covid {
+    background-color: $color-purple;
+    @include flex-center;
+    padding: 10px;
+    height: 4rem;
+    @include respond(phone) {
+      height: auto;
+    }
+    p {
+      color: $color-white;
+      @include respond(tab) {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+    }
+  }
+  b {
+    padding: 0 5px;
+  }
+
+  &-box {
+    background-color: #f4f4f4;
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    min-height: 40rem;
+    @include respond(tab) {
+      grid-template-columns: 60% 40%;
+    }
+    @include respond(phone) {
+      @include flex-center;
+      flex-direction: column-reverse;
+      height: auto;
+      padding-bottom: 1rem;
+    }
+    &-description {
+      @include flex-center;
+      align-items: flex-start;
+      flex-direction: column;
+      margin: 0 10%;
+      &-slogan {
+        font-size: 1.2rem;
+        @include respond(phone) {
+          font-size: 1rem;
+          padding-bottom: 1rem;
+        }
+      }
+      &-title {
+        font-size: 3.5rem;
+        color: $color-purple;
+        font-family: $font-title;
+
+        @include respond(tab) {
+          font-size: 2rem;
+        }
+        @include respond(phone) {
+          font-size: 1.4rem;
+          padding-bottom: 1rem;
+        }
+      }
+      &-text {
+        font-weight: lighter;
+        line-height: 2rem;
+        @include respond(tab) {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+      &-btns {
+        margin-top: 1.2rem;
+        &-btn {
+          padding: 1.3rem 2.5rem;
+          margin-right: 1.2rem;
+          font-size: 1.1rem;
+          letter-spacing: 1px;
+          @include respond(tab) {
+            margin-top: 10px;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    &-img {
+      width: 100%;
+      height: 40rem;
+      @include respond(phone) {
+        height: 20rem;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: top right;
+
+        @include respond(phone) {
+          height: 20rem;
+        }
+      }
+    }
+  }
+}
+// ///////////////////////////////////////
+
+.container {
+  margin: 0 6%;
+  @include respond(tab) {
+    margin: 0 3%;
+  }
+}
+// que es
+.whatIs {
+  margin: 5% 0;
+  display: grid;
+  grid-template-columns: 30rem 1fr;
+  @include respond(tab) {
+    display: block;
+  }
+  &-img {
+    position: relative;
+    width: 30rem;
+    height: 20rem;
+    @include respond(tab) {
+      width: 100%;
+      height: 30rem;
+    }
+    @include respond(tab) {
+      width: 100%;
+      height: 20rem;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &-icon {
+      cursor: pointer;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      margin-top: -50px;
+      margin-left: -50px;
+      width: 6rem;
+      height: 6rem;
+      fill: red;
+    }
+  }
+  &-description {
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    @include respond(tab) {
+      margin-left: 0;
+    }
+
+    h2 {
+      color: $color-purple;
+      margin-bottom: 1.3rem;
+      font-family: $font-title;
+      font-size: 2.2rem;
+      @include respond(phone) {
+        margin-top: 1rem;
+        font-size: 1.6rem;
+      }
+    }
+    p {
+      line-height: 1.8rem;
+      font-weight: lighter;
+      color: $color-dark-gray;
+      @include respond(phone) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+//beneficios
+.benefits {
+  &-title {
+    @include flex;
+    color: $color-purple;
+
+    &-box {
+      h2 {
+        font-family: $font-title;
+        font-size: 2rem;
+        color: $color-purple;
+
+        @include respond(phone) {
+          font-size: 1.5rem;
+        }
+      }
+      button {
+        margin-top: 2px;
+        padding-top: 6px;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: transparent;
+        border-radius: 50%;
+        border: none;
+
+        &:hover {
+          background-color: $color-light-gray;
+        }
+      }
+      &-icons {
+        height: 2.5rem;
+
+        &-icon {
+          fill: $color-dark-gray;
+          width: 1.6rem;
+          height: 1.6rem;
+        }
+      }
+    }
+    &-btn {
+      color: $color-pink;
+      background-color: transparent;
+      border: 1.5px solid $color-pink;
+      @include respond(phone) {
+        margin-top: 1rem;
+        font-size: 10px;
+        padding: 10px;
+      }
+      &:hover {
+        background-color: $color-pink;
+        color: $color-white;
+        width: 190px;
+      }
+    }
+  }
+  &-main {
+    @include flex;
+
+    &-btn {
+      margin-top: 2px;
+      padding-top: 6px;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: transparent;
+      border-radius: 50%;
+      border: none;
+      @include respond(phone) {
+        opacity: 0;
+        display: none;
+      }
+
+      &:hover {
+        background-color: $color-light-gray;
+      }
+    }
+    &-icons {
+      height: 2.5rem;
+
+      &-icon {
+        fill: $color-dark-gray;
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+  }
+  // /grilla de beneficios
+  &-container {
+    margin: 0 5%;
+    overflow: hidden;
+    @include flex;
+    height: 95%;
+  }
+  &-grill {
+    vertical-align: top;
+    transition: 2s;
+    margin: 2rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    @include respond(tab) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include respond(phone) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &-box {
+      transition: 2s;
+      padding: 1rem 1rem 2.5rem;
+      border-radius: 10px;
+      border: $border-gray;
+      &-img {
+        position: relative;
+        width: 100%;
+        height: 13rem;
+        img {
+          border-radius: 10px;
+          width: 100%;
+          height: 13rem;
+        }
+      }
+      &-title {
+        font-family: $font-title;
+        font-size: 1.5rem;
+        color: $color-purple;
+        margin: 8px 0;
+        transition: 0.3s;
+      }
+      &-description {
+        font-weight: lighter;
+        color: $color-dark-gray;
+      }
+
+      .hover {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+
+        @include flex-center;
+        &-btn {
+          letter-spacing: 1px;
+          background-color: transparent;
+          border: 1.5px solid $color-white;
+          color: $color-white;
+        }
+      }
+
+      &:hover {
+        box-shadow: $shadow-card-product-hover;
+        .hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+// membership
+.membership {
+  width: 100%;
+  &-title {
+    @include flex-center;
+    flex-direction: column;
+    h1 {
+      font-family: $font-title;
+      color: $color-purple;
+      font-size: 3rem;
+      margin-bottom: 1.6rem;
+      @include respond(phone) {
+        font-size: 1.7rem;
+        text-align: center;
+      }
+    }
+  }
+
+  &-container {
+    padding: 0 5% 2%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    background-image: url("../img/wave.svg");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+
+    @include respond(phone) {
+      display: block;
+    }
+    &-box {
+      position: relative;
+      &-circle {
+        @include flex-center;
+        width: 8rem;
+        height: 8rem;
+        background-color: $color-pink;
+        border-radius: 50%;
+        float: left;
+        -webkit-shape-outside: circle();
+        shape-outside: circle();
+        margin-right: 2rem;
+
+        @include respond(phone) {
+          width: 6rem;
+          height: 6rem;
+        }
+        h1 {
+          color: $color-white;
+        }
+        &:hover {
+          box-shadow: $shadow-card-product;
+        }
+      }
+      &-description {
+        margin-left: 1rem;
+        @include respond(tab) {
+          h1 {
+            font-size: 17px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+        @include respond(phone) {
+          h1 {
+            font-size: 15px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+.banner {
+  width: 100%;
+  margin: 0;
+  img {
+    width: 100%;
+  }
+}
+////////@include
+
+.numbers {
+  @include flex-center;
+  flex-direction: column;
+  background-color: rgba(230, 235, 241, 0.5);
+  margin-bottom: 10rem;
+  @include respond(tab) {
+    margin-bottom: 4rem;
+  }
+  &-title {
+    padding-top: 8%;
+    text-align: center;
+    h1 {
+      font-size: 4rem;
+      color: $color-purple;
+      @include respond(tab) {
+        font-size: 2rem;
+      }
+    }
+  }
+  &-grill {
+    margin: 2% 0 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    @include respond(tab) {
+      grid-gap: 1rem;
+    }
+    @include respond(phone) {
+      display: block;
+    }
+    &-box {
+      max-width: 400px;
+      height: 350px;
+      color: $color-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      @include respond(phone) {
+        max-width: 300px;
+        height: 300px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 3rem;
+        @include respond(tab) {
+          font-size: 1.5rem;
+        }
+      }
+      p {
+        text-align: center;
+        color: $color-white;
+        padding: 10px;
+        font-size: 1.4rem;
+        @include respond(tab) {
+          font-size: 1.1rem;
+        }
+      }
+      &-icon {
+        width: 100px;
+        height: 100px;
+        fill: $color-white;
+        @include respond(tab) {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
+}
+.brands {
+  padding: 2rem 0 4rem;
+  @include flex-center;
+
+  img {
+    margin: 0 1.5rem;
+    @include respond(tab) {
+      margin: 0 0.5rem;
+    }
+    @include respond(phone) {
+      width: 50px;
+      margin: 0 5px;
+    }
+  }
+}
+
+.testimonies {
+  margin-left: 1rem;
+  height: auto;
+  @include respond(phone) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  &-title {
+    color: $color-purple;
+    font-size: 2.4rem;
+    text-align: center;
+    @include respond(tab) {
+      font-size: 1.7rem;
+    }
+    @include respond(phone) {
+      font-size: 1.5rem;
+    }
+  }
+  &-container {
+    overflow: hidden;
+    @include flex;
+    height: 95%;
+    width: 100%;
+  }
+  &-grill {
+    vertical-align: top;
+    transition: 2s;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    @include respond(tab) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include respond(phone) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &-box {
+      padding: 1rem 2.5rem 2.5rem;
+      border-radius: 10px;
+      border: $border-gray;
+      @include respond(tab) {
+        padding: 1rem;
+      }
+      @include respond(tab) {
+        padding: 0.7rem;
+      }
+      &-title {
+        font-family: $font-title;
+        font-size: 1.5rem;
+        @include respond(tab) {
+          font-size: 1rem;
+        }
+      }
+      &-description {
+        margin: 1rem 0;
+        font-weight: lighter;
+        color: $color-dark-gray;
+        line-height: 2rem;
+        @include respond(tab) {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+      &:hover {
+        box-shadow: $shadow-card-product-hover;
+      }
+    }
+  }
+}

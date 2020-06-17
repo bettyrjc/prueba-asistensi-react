@@ -1,0 +1,16 @@
+.test-slider-box {
+  @include flex-center;
+
+  &-circle {
+    cursor: pointer;
+    height: 1rem;
+    width: 1rem;
+    margin: 0 5px 1rem;
+    background-color: $color-light-pink;
+    border-radius: 100%;
+
+    &.active {
+      background-color: $color-pink;
+    }
+  }
+}

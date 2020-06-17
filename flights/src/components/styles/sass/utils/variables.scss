@@ -1,0 +1,33 @@
+// colores
+$color-purple: #200844;
+$color-pink: #fb314a;
+$color-light-pink: #ffe7ea;
+$color-light-purple: #f1e8ff;
+$color-white: white;
+$color-dark-gray: #43484d;
+$color-light-gray: #f4f4f4;
+$border-gray: solid 1px #e6ebf1;
+// fuentes
+$font-li: "AvenirNext", "Open Sans", sans-serif;
+$font-title: "Poppins", "Open Sans", sans-serif;
+// Sombras
+$shadow-button: 0 0.5rem 0.5rem rgba(110, 110, 110, 0.3);
+$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+$shadow-button: 0.5rem 0.5rem 1rem rgba(110, 110, 110, 0.3);
+$shadow-card-product: 0 1rem 1rem rgba(110, 110, 110, 0.3);
+$shadow-card-product-hover: 0 1rem 1rem rgba(110, 110, 110, 0.5);
+$transition-background-color: background-color 0.25s;
+
+// gradientes
+$gradient-purple: linear-gradient(
+  90deg,
+  rgba(32, 8, 68, 1) 0%,
+  rgba(3, 58, 124, 1) 51%,
+  rgba(32, 8, 68, 1) 93%
+);
+$gradient-pink: linear-gradient(
+  90deg,
+  rgba(251, 49, 74, 1) 0%,
+  rgba(251, 49, 49, 1) 51%,
+  rgba(251, 49, 74, 1) 93%
+);

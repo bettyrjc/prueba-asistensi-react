@@ -1,0 +1,66 @@
+.search {
+  padding: 1rem;
+  width: 400px;
+  border: $border-gray;
+  @include flex-center;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include respond(phone) {
+    width: 300px;
+  }
+  &-container {
+    margin: 3rem 0;
+    @include flex-center;
+    flex-direction: column;
+  }
+  &-input {
+    width: 90%;
+    @include flex-center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: $font-li;
+    color: $color-dark-gray;
+    font-size: 14px;
+
+    label {
+      padding-top: 10px;
+    }
+    input {
+      border-radius: 10px;
+      width: 100%;
+      margin-top: 10px;
+      border: $border-gray;
+      padding: 0.5rem 1rem;
+    }
+  }
+  &-btn {
+    margin-top: 1rem;
+    width: 98%;
+    background-color: #000000;
+    color: $color-white;
+    width: 450px;
+    @include respond(phone) {
+      width: 300px;
+    }
+  }
+}
+
+.flex {
+  @include flex-center;
+}
+.card {
+  margin: 2rem 1rem;
+  border: $border-gray;
+  padding: 1rem;
+  width: 100%;
+  height: auto;
+  p {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  &:hover {
+    box-shadow: $shadow-card-product;
+  }
+}

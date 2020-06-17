@@ -1,0 +1,127 @@
+.footer {
+  padding: 5% 2% 0;
+  background: $color-purple;
+  @include respond(tab) {
+    padding: 3% 1% 0;
+  }
+  @include respond(phone) {
+    padding: 1%;
+  }
+  &-container {
+    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 200px 300px;
+    @include respond(tab) {
+      grid-template-columns: 1fr 0.3fr 0.3fr;
+    }
+    @include respond(phone) {
+      display: block;
+    }
+    &-contacts {
+      &-texts {
+        p {
+          color: $color-white;
+          margin-top: 1rem;
+          @include respond(tab) {
+            font-size: 16px;
+          }
+        }
+      }
+      &-btns {
+        margin-top: 2rem;
+        @include respond(phone) {
+          margin-bottom: 1rem;
+        }
+        &-btn {
+          margin-right: 1rem;
+          font-size: 16px;
+          width: 16rem;
+          padding: 1.5rem 3rem;
+          color: $color-white;
+          background-color: rgba($color: $color-light-purple, $alpha: 0.3);
+          transition: all 0.5s;
+          @include respond(tab) {
+            width: 13rem;
+            padding: 1rem 2rem;
+          }
+          @include respond(phone) {
+            width: 12rem;
+            padding: 0.8rem 0.6rem;
+            font-size: 14px;
+            margin-right: 0;
+            margin-top: 5px;
+          }
+          &:hover {
+            height: auto;
+            width: 17rem;
+            box-shadow: $shadow-button;
+            @include respond(tab) {
+              width: 14rem;
+            }
+            @include respond(phone) {
+              width: 14rem;
+            }
+          }
+        }
+      }
+    }
+    &-list {
+      h3 {
+        font-size: 1.4rem;
+        @include respond(tab) {
+          font-size: 1.2rem;
+        }
+      }
+      ul {
+        padding: 0;
+      }
+      li {
+        margin: 0;
+        color: $color-white;
+        margin: 5px 0;
+
+        font-size: 18px;
+        @include respond(tab) {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  &-red {
+    padding: 3% 0;
+    border-top: 1px solid $color-white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      font-weight: 400;
+      color: $color-white;
+      @include respond(tab) {
+        font-size: 13px;
+      }
+      @include respond(phone) {
+        font-size: 10px;
+      }
+    }
+    img {
+      width: 10rem;
+      height: 7rem;
+      @include respond(phone) {
+        width: 4rem;
+        height: 5rem;
+      }
+    }
+    &-social {
+      &-icon {
+        fill: $color-white;
+        height: 1.5rem;
+        width: 2rem;
+
+        @include respond(phone) {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+    }
+  }
+}

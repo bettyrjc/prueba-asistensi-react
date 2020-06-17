@@ -1,0 +1,17 @@
+.btn {
+  cursor: pointer;
+  font-family: $font-li;
+  border: none;
+  border-radius: 3px;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  transition: all 0.6, background-color 0.7s, color 0.5s;
+
+  &:hover {
+    box-shadow: $shadow-button;
+  }
+}
+
+.btn-outlined {
+  cursor: pointer;
+}
