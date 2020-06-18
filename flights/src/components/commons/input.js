@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-const input = ({ id, label, value, type, onChange, placeholder }) => {
+const input = ({ id, label, value, type, onChange, placeholder, error }) => {
   return (
     <div className="search-input">
       <label htmlFor={id}>{label}</label>
@@ -12,6 +12,7 @@ const input = ({ id, label, value, type, onChange, placeholder }) => {
         onChange={onChange}
         placeholder={placeholder ? placeholder : ""}
       />
+      {error && <span className="c-pink">{error}</span>}
     </div>
   );
 };
@@ -22,11 +23,11 @@ input.propType = {
   type: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   error: PropTypes.string,
-  active_label: PropTypes.bool.isRequired,
   placeholder: PropTypes.string,
 };
 input.defaultProps = {
   type: "text",
   placeholder: null,
+  error: null,
 };
 export default input;

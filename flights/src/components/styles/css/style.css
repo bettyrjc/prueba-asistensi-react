@@ -237,7 +237,6 @@ p {
   position: absolute;
   padding: 0;
   z-index: 3000;
-  background-color: rgba(14, 14, 14, 0.6);
   height: 200vh;
   width: 100%;
   top: 0;
@@ -247,14 +246,15 @@ p {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
   pointer-events: none; }
-  .nav-bar.active {
-    overflow: visible;
-    visibility: visible;
-    opacity: 100%;
-    height: max-content; }
+  @media (max-width: 64em) {
+    .nav-bar.active {
+      overflow: visible;
+      visibility: visible;
+      opacity: 100%;
+      height: max-content; } }
 
 .side {
-  background-color: white;
+  background-color: #f4f4f4;
   height: 200vh;
   width: 300px;
   padding: 1rem 0 0; }
@@ -339,15 +339,23 @@ p {
         .footer-container-contacts-texts p {
           font-size: 16px; } }
     .footer-container-contacts-btns {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
       margin-top: 2rem; }
       @media (min-width: 6.25em) and (max-width: 37.5em) {
         .footer-container-contacts-btns {
+          align-items: flex-start;
+          flex-direction: column;
           margin-bottom: 1rem; } }
       .footer-container-contacts-btns-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-right: 1rem;
         font-size: 16px;
         width: 16rem;
-        padding: 1.5rem 3rem;
+        padding: 1.5rem 2rem;
         color: white;
         background-color: rgba(241, 232, 255, 0.3);
         transition: all 0.5s; }
@@ -550,7 +558,7 @@ p {
       margin-left: -50px;
       width: 6rem;
       height: 6rem;
-      fill: red; }
+      fill: white; }
   .whatIs-description {
     margin-left: 5rem;
     display: flex;
@@ -921,6 +929,11 @@ p {
       .testimonies-grill-box:hover {
         box-shadow: 0 1rem 1rem rgba(110, 110, 110, 0.5); }
 
+.search-box {
+  width: auto;
+  height: 120vh;
+  margin: 0; }
+
 .search {
   padding: 1rem;
   width: 400px;
@@ -938,7 +951,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; }
+    flex-direction: column;
+    justify-content: flex-start; }
   .search-input {
     width: 90%;
     display: flex;
@@ -967,6 +981,23 @@ p {
     @media (min-width: 6.25em) and (max-width: 37.5em) {
       .search-btn {
         width: 300px; } }
+  .search-header {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem; }
+    @media (max-width: 64em) {
+      .search-header {
+        width: 96%; } }
+  .search-footer {
+    margin: 0;
+    width: auto;
+    height: auto;
+    padding: 5% 2% 5%; }
+    @media (max-width: 64em) {
+      .search-footer {
+        height: auto; } }
 
 .flex {
   display: flex;

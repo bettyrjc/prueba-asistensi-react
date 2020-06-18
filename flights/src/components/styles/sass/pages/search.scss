@@ -1,3 +1,8 @@
+.search-box {
+  width: auto;
+  height: 120vh;
+  margin: 0;
+}
 .search {
   padding: 1rem;
   width: 400px;
@@ -13,6 +18,7 @@
     margin: 3rem 0;
     @include flex-center;
     flex-direction: column;
+    justify-content: flex-start;
   }
   &-input {
     width: 90%;
@@ -43,6 +49,25 @@
     width: 450px;
     @include respond(phone) {
       width: 300px;
+    }
+  }
+  &-header {
+    width: auto;
+    @include flex;
+    padding: 0 1rem;
+
+    @include respond(tab) {
+      width: 96%;
+    }
+  }
+  &-footer {
+    margin: 0;
+    width: auto;
+    height: auto;
+    padding: 5% 2% 5%;
+
+    @include respond(tab) {
+      height: auto;
     }
   }
 }

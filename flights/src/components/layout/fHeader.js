@@ -3,16 +3,10 @@ import { Link } from "react-router-dom";
 import icons from "../styles/img/icons/sprite.svg";
 const header = () => {
   return (
-    <header className="header flex">
-      <div className="header-menuicon">
-        <svg className="header-menuicon-icon" id="menu">
-          <use href={`${icons}#icon-menu`} />
-        </svg>
-      </div>
-      <Link to="./index.html" className="logo">
+    <header className="header search-header">
+      <Link to="/" className="logo">
         Vuela rapido
       </Link>
-
       <ul className="header-links">
         <li className="header-links-link">
           <Link to=" ">Destinos</Link>
@@ -27,6 +21,11 @@ const header = () => {
           <Link to=" ">FAQ's</Link>
         </li>
       </ul>
+      <div className="header-menuicon">
+        <svg className="header-menuicon-icon" id="menu">
+          <use href={`${icons}#icon-menu`} />
+        </svg>
+      </div>
     </header>
   );
 };

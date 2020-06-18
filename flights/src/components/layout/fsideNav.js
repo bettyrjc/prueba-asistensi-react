@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function sideNav() {
+function sideNav() {
   return (
     <div className="nav-bar" id="nav">
       <div className="side">
@@ -16,12 +16,7 @@ export default function sideNav() {
         <ul className="side-links">
           <li className="side-links-item">
             <Link to="" className="c-pink side-links-link">
-              Inicio
-            </Link>
-          </li>
-          <li className="side-links-item">
-            <Link to="" className="side-links-link">
-              Planes
+              Destinos
             </Link>
           </li>
           <li className="side-links-item">
@@ -39,21 +34,6 @@ export default function sideNav() {
               FAQ's
             </Link>
           </li>
-          <li className="side-links-item">
-            <Link to="" className="side-links-link">
-              Contacto
-            </Link>
-          </li>
-          <li className="side-links-item">
-            <Link to="" className="side-links-link">
-              SOS
-            </Link>
-          </li>
-          <li className="side-links-item">
-            <Link to="/busqueda" className="side-links-link">
-              Vuelos
-            </Link>
-          </li>
         </ul>
 
         <div className="side-buttons">
@@ -68,3 +48,4 @@ export default function sideNav() {
     </div>
   );
 }
+export default sideNav;

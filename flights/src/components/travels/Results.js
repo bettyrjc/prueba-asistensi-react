@@ -6,7 +6,8 @@ import Header from "../layout/fHeader";
 import Footer from "../layout/fFooter";
 import Spinner from "../utils/loaders";
 import { getSearch } from "../../actions/searchAction";
-// import searchReducer from "../../reducers/searchReducer";
+import SideNav from "../layout/fsideNav";
+import { utils } from "../utils/utils";
 class Results extends Component {
   state = {
     country: "",
@@ -17,8 +18,9 @@ class Results extends Component {
     outboundPartialDate: "",
     inboundPartialDate: "",
   };
-  componentDidMount() {
-    this.props.getSearch();
+  componentDidMount() {}
+  componentDidUpdate() {
+    utils();
   }
   render() {
     const { loading } = this.props;
@@ -29,14 +31,16 @@ class Results extends Component {
       return (
         <React.Fragment>
           <Header />
-          <div className="container ">
+          <SideNav />
+          <div className="search-container search-box ">
             <h3 className="c-pink m-t">Resultados</h3>
             <div className="card">
               {Places &&
                 Places.map((place) => (
                   <div key={place.PlaceId} className="">
                     <p>
-                      {place.PlaceId}-{place.CityName}-{place.CountryName}
+                      {place.PlaceId}-{place.CityName}-{place.CountryName} -
+                      {place.IataCode}
                     </p>
                   </div>
                 ))}
@@ -49,14 +53,6 @@ class Results extends Component {
                   </div>
                 ))}
             </div>
-            {/* <div>
-              {Currencies &&
-                Currencies.map((money) => (
-                  <div key={money.placeId}>
-                    <p>{money.Code}</p>
-                  </div>
-                ))}
-            </div> */}
           </div>
           <Footer />
         </React.Fragment>

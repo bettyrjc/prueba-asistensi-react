@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import icons from "../styles/img/icons/sprite.svg";
 export default function footer() {
   return (
-    <footer className="footer">
+    <footer className="footer search-footer">
       <div className="footer-container">
         <div className="footer-container-list">
           <h3 className="c-pink">Información</h3>

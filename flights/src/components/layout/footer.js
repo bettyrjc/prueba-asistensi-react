@@ -1,5 +1,6 @@
 import React from "react";
 import icons from "../styles/img/icons/sprite.svg";
+import { Link } from "react-router-dom";
 export default function footer() {
   return (
     <footer className="footer">
@@ -18,10 +19,16 @@ export default function footer() {
             </p>
           </div>
           <div className="footer-container-contacts-btns">
-            <button className="btn footer-container-contacts-btns-btn">
+            <button className="btn footer-container-contacts-btns-btn ">
+              <svg className="footer-red-social-icon">
+                <use href={`${icons}#icon-appleinc`} />
+              </svg>
               App Store
             </button>
             <button className="btn footer-container-contacts-btns-btn">
+              <svg className="footer-red-social-icon">
+                <use href={`${icons}#icon-googleplay`} />
+              </svg>
               Google play
             </button>
           </div>
@@ -29,41 +36,41 @@ export default function footer() {
         <div className="footer-container-list">
           <h3 className="c-pink">Mapa de sitio</h3>
           <ul>
-            <a href="">
+            <Link>
               <li>¿Quienes somos?</li>
-            </a>
-            <a href="">
+            </Link>
+            <Link>
               <li>Planes</li>
-            </a>
-            <a href="">
+            </Link>
+            <Link>
               <li>Beneficios</li>
-            </a>
-            <a href="">
+            </Link>
+            <Link>
               <li>Cotizar un plan</li>
-            </a>
-            <a href="">
+            </Link>
+            <Link href="">
               <li>Contacto</li>
-            </a>
+            </Link>
           </ul>
         </div>
         <div className="footer-container-list">
           <h3 className="c-pink">Información</h3>
           <ul>
-            <a href="">
+            <Link>
               <li>Preguntas Frecuentes</li>
-            </a>
-            <a href="">
+            </Link>
+            <Link>
               <li>Términos de uso</li>
-            </a>
-            <a href="">
+            </Link>
+            <Link>
               <li>Políticas de privacidad</li>
-            </a>
-            <a href="">
+            </Link>
+            <Link>
               <li>Políticas de cookies</li>
-            </a>
-            <a href="">
+            </Link>
+            <Link>
               <li>Aviso legal</li>
-            </a>
+            </Link>
           </ul>
         </div>
       </div>
@@ -72,7 +79,7 @@ export default function footer() {
         <img src="https://asistensi.com/static/images/logo.svg" alt="logo" />
         <div className="footer-red-social">
           <svg className="footer-red-social-icon">
-            <use href={`${icons}#icon-facebook2`} />
+            <use href={`${icons}#icon-facebook1`} />
           </svg>
           <svg className="footer-red-social-icon">
             <use href={`${icons}#icon-linkedin`} />

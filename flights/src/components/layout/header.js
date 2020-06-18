@@ -4,15 +4,11 @@ import icons from "../styles/img/icons/sprite.svg";
 const header = () => {
   return (
     <header className="header">
-      <div className="header-menuicon">
-        <svg className="header-menuicon-icon" id="menu">
-          <use href={`${icons}#icon-menu`} />
-        </svg>
-      </div>
       <Link to="./index.html">
         <img
           className="header-logo"
           src="https://asistensi.com/static/images/Asistensi_logotipo.svg"
+          alt="logo"
         />
       </Link>
 
@@ -50,6 +46,11 @@ const header = () => {
         <button className="btn header-buttons-btn c-pink b-lightPink">
           Afiliarse
         </button>
+      </div>
+      <div className="header-menuicon">
+        <svg className="header-menuicon-icon" id="menu">
+          <use href={`${icons}#icon-menu`} />
+        </svg>
       </div>
     </header>
   );

@@ -92,7 +92,6 @@
   padding: 0;
   z-index: 3000;
 
-  background-color: rgba(14, 14, 14, 0.6);
   height: 200vh;
   width: 100%;
   top: 0;
@@ -104,14 +103,16 @@
   pointer-events: none;
   // Mostrar el menu flotante
   &.active {
-    overflow: visible;
-    visibility: visible;
-    opacity: 100%;
-    height: max-content;
+    @include respond(tab) {
+      overflow: visible;
+      visibility: visible;
+      opacity: 100%;
+      height: max-content;
+    }
   }
 }
 .side {
-  background-color: $color-white;
+  background-color: $color-light-gray;
   height: 200vh;
 
   width: 300px;

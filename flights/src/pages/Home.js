@@ -9,6 +9,7 @@ import icons from "../components/styles/img/icons/sprite.svg";
 import { utils } from "../components/utils/utils";
 import Spinner from "../components/utils/loaders";
 import "../components/styles/css/style.css";
+
 class Home extends Component {
   componentDidMount() {
     utils();
@@ -80,7 +81,7 @@ class Home extends Component {
                   />
                   <div className="overlay">
                     <svg className="whatIs-img-icon">
-                      <use href={`${icons}#icon-youtube`} />
+                      <use href={`${icons}#icon-play_arrow`} />
                     </svg>
                   </div>
                 </div>
@@ -182,7 +183,7 @@ class Home extends Component {
               <div className="numbers-grill">
                 <div className="numbers-grill-box pink">
                   <svg className="numbers-grill-box-icon">
-                    <use href={`${icons}#icon-price-users`} />
+                    <use href={`${icons}#icon-users`} />
                   </svg>
                   <h1>98%</h1>
                   <p>
@@ -193,7 +194,7 @@ class Home extends Component {
 
                 <div className="numbers-grill-box purple">
                   <svg className="numbers-grill-box-icon">
-                    <use href={`${icons}#icon-price-watch`} />
+                    <use href={`${icons}#icon-watch`} />
                   </svg>
                   <h1>98%</h1>
                   <p>
